@@ -1,1 +1,7 @@
 language: haskell
+
+cache:
+  directories:
+  - $HOME/.ghc
+  - $HOME/.cabal
+  - $HOME/.stack 

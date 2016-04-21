@@ -3,6 +3,7 @@ import Test.Framework.Providers.QuickCheck2 (testProperty)
 import Test.QuickCheck
 import Test.QuickCheck.Arbitrary
 import Data.List (transpose, intercalate)
+import Lib (diamond)
 
 tests = [testGroup "Trivial Props" [
                   testProperty "Letter A first" prop_first_char_is_A
@@ -109,8 +110,6 @@ prop_middle_whitespace_correct (NT c) = counterexample (intercalate "," $ lines 
     safeTail (x:xs) = Just xs
 
     
-diamond c = intercalate "\n" $ (map f ['A'..c]) ++ (map f $ tail $ reverse ['A'..c])
-  where f = (:"")
 
 exampleB =  " A " ++ "\n"
          ++ "B B" ++ "\n"

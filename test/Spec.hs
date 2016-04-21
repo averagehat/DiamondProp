@@ -13,7 +13,7 @@ tests = [testGroup "Trivial Props" [
            --testProperty "Contains all letters preceding" prop_contains_all_preceding_letters
            ]
          , testGroup "Whitespace" [
-           testProperty "Middle WS" prop_middle_whitespace_correct
+           --testProperty "Middle WS" prop_middle_whitespace_correct
            ]
          , testGroup "Examples" [
            testProperty "Example 'A'" prop_a_example
